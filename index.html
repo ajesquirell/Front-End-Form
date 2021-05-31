@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Request More Information</title>
+    </head>
+    <body>
+
+        <main> <!--Box outline-->
+        <section> <!--Inner box to add padding-->
+
+        <h2>Request More Information</h2>
+
+        <!-- Form for all of the inputs-->
+        <form action="" id="info_form">
+
+            <!-- Type of Degree Select Dropdown -->
+            <div>
+            <label for="type">What degree type would you like?*</label><br>
+            <select name="type" id="type" onchange="CheckTypeValidity()" required>
+                <option value="t">Select</option>
+                <option value="t1">Bachelor's</option>
+                <option value="t2">Graduate</option>
+                <option value="t3">Doctoral/Post Graduate</option>
+                <option value="t4">Associate</option>
+                <option value="t5">Certificates</option>
+            </select>
+
+            <span id="errortype" class="error" hidden>Please select a level</span>
+            </div>
+
+            <br><br>
+
+            <!--Degree Select Dropdown-->
+            <div>
+            <label for="degree">What would you like to study?*</label><br>
+            <select name="degree" id="degree" required disabled>
+                <!--Made valid when type of degree select is chosen-->
+                <option value="d">Select degree type above</option>
+                <option value="d1">AA: Criminal Justice</option>
+                <option value="d2">BS: Computer Engineering</option>
+                <option value="d3">BS: Mechanical Engineering</option>
+                <option value="d4">BS: Computer Science</option>
+                <option value="d5">BS: Music Education</option>
+            </select>
+
+            <span id="errordegree" class="error" hidden>Please select a degree</span>
+            </div>
+
+            <br><br>
+
+            <!--First and Last name-->
+            <div class="name">
+                <label for="fn">First Name*</label>
+                <input type="text" id="fn" name="fn" required>
+                <span id="errorfn" class="error" hidden>Please enter your first name</span>
+            </div>
+            <div class="name">
+                <label for="ln">Last Name*</label>
+                <input type="text" id="ln" name="ln" required>
+                <span id="errorln" class="error" hidden>Please enter your last name</span>
+            </div>
+
+
+
+
+            <br><br>
+
+            <!--Email-->
+            <div>
+                <label for="email">Email*</label><br>
+                <input type="text" id="email" name="email" required>
+                <span id="erroremail" class="error" hidden>Please enter a valid email address</span>
+            </div>
+
+            <br><br>
+
+            <!--Phone-->
+        <div>
+            <label for="phone">Telephone*</label><br>
+            <input type="tel" id="phone" name="phone">
+            <span id="errorphone" class="error" hidden>Please enter a valid phone number</span>
+        </div>
+
+            <br><br>
+
+            <!--Address-->
+        <div>
+            <label for="address">Address*</label>
+            <a href="#"><small>Apt., P.O. box, or don't see your address?</small><br></a>
+            <input type="text" id="address" name="address" class="address" placeholder="Enter a location" required>
+            <span id="erroraddress" class="error" hidden>Please enter an address</span>
+        </div>
+
+            <br><br>
+
+            <!--Submit/Tell Me More button-->
+            <input type="submit" value="Tell Me More" >
+            
+        </form>
+        
+            <!--Disclaimer-->
+            <p id="e" class="disclaimer">
+                By submitting contact information through this form, I agree that Liberty University and its affiliates may call and/or text me about its offerings by any phone number I have provided and may provide in the future, including any wireless number, using automated technology.
+                <br><br>
+                Message and data rates may apply. For additional information, text HELP to 49596. You may opt-out at any time by sending STOP to 49596. Visit for <a href="https://www.liberty.edu/informationservices/index.cfm?PID=31265" rel="nofollow">Terms & Conditions</a> and <a href="https://www.liberty.edu/index.cfm?PID=6901">Privacy Policy</a>.
+            </p> 
+            
+        
+        
+
+        <p class="or"><span>OR</span></p>
+        <input type="button" class="buttonApply" value="Apply Now" onclick="location.href='https://apply.liberty.edu/'">
+    </section>
+    </main>
+
+    <!--Link JS-->
+    <script src="functions.js"></script>
+    </body>
+</html>

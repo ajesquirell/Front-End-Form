@@ -1,0 +1,191 @@
+/*Set default for body and header*/
+body, h2{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+  }
+
+
+/*Fill in background with image*/
+body{
+    background-image: url("back.jpg"); 
+}
+
+/*Main holds all of the content*/
+main{
+    width: 400px;
+    max-width: 90%;
+
+    margin: 5% auto;
+    
+    background-color: white;
+    border: 2px solid black;
+}
+section{
+    text-align: left;
+    margin: 5%;
+}
+
+h2{
+    text-align: center;
+    padding: 10px 0;
+}
+
+/*First and last name side by side on big screens*/
+div.name {
+    display: inline-block;
+}
+
+div.name label {
+    display: block;
+}
+/*=====================================*/
+
+div{ /*Using div to position each error message*/
+    position: relative;
+}
+.error{
+    position: absolute;
+    top: 48px;
+    left: 0;
+    color: red;
+}
+
+form label{ 
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/*Input field size and width is long*/
+form input{ 
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 98%;
+    border: 1px solid #b3b3b0;
+    background-color: white;
+}
+
+/*Width is a bit shorter on name inputs*/
+form input[name="fn"], input[name="ln"]{ 
+    width: 95%;
+}
+
+form select{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 98%;
+    border: 1px solid #b3b3b0;
+    background-color: white;
+}
+
+/*Telephone input is shorter than the rest*/
+input[type="tel"]{ 
+    width: 50%;
+}
+
+/*Link is smaller size and style to match*/
+form a{ 
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #2772CB;
+    margin-left: 100px;
+}
+
+form .error{
+    font-size: 10px;
+}
+
+
+.disclaimer{
+    color: #b3b3b0;
+    font-size: 0.7em;
+    width: 100%;
+    margin: 10px auto;
+}
+
+input[type="submit"]{
+    border: none;
+    color: white;
+    padding: 15px 82px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #2772CB;
+}
+input[type="submit"]:hover{
+    background-color: #0e4f9e;
+}
+
+/*The word "OR" near the bottom*/
+/*Use a border for the line on either side of "OR"*/
+p.or{
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #b3b3b0;
+    line-height: 0.1em;
+    margin: 40px 0 20px;
+    font-size: 0.75em;
+    color: #b3b3b0;
+}
+p.or span{
+    background-color: #fff;
+    padding: 0 10px;
+}
+
+/*  "Apply Now" button  */
+.buttonApply{
+    border: none;
+    color: white;
+    padding: 15px 82px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    width: 100%;
+    cursor: pointer;
+    background-color:#01AA71;
+}
+.buttonApply:hover{
+    background-color: #128a36;
+}
+
+/*Responsive style*/
+/*If viewport is less than 470px*/
+@media screen and (max-width: 470px){
+
+    /*First and last name now stacked*/
+    div.name {
+        display: block; 
+    }
+
+    /*Format first and last names differently*/
+    div input[name="fn"]{
+        margin-bottom: 25px; /*Space between first and last*/
+        width: 98%;
+    }
+    div input[name="ln"]{
+        width: 98%;
+    }
+   }
+
+    /*Screen is <= 460px*/
+   @media screen and (max-width: 460px){
+
+    /*Link near address loses its margin to save space*/
+    form a{ 
+        margin-left: 0;
+    }
+   }
+
+   /*Screen is <= 335px*/
+   @media screen and (max-width: 335px){
+
+    /*Link near address display as block to show on new line*/
+    form a{
+        display: block;
+    }
+   }
+  
